@@ -19,7 +19,7 @@ const list = computed(() => {
   <island>
     <h1>Sortable div</h1>
     <div class="sortable-div">
-      <el-card v-for="(index, val) in list"></el-card>
+      <el-card v-for="(item) in list" :key="item" style="margin: 5px">{{item.name}}</el-card>
     </div>
 
     <p>legacy value is: {{ JSON.stringify(legacyList) }}</p>
