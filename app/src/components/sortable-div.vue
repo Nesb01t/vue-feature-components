@@ -26,26 +26,31 @@ const {option} = useSortable(somethingToBeRef, list, {
   /**
    * 通过 useSortable 的 fn 参数直接设置 animation 属性
    */
-  // animation: 500
+  animation: 500
 })
 
 /**
  * 1. OPTION
  * 通过选项添加动画等
  */
-const ANIMATION_DURATION_MILLISECOND = 2000
-option('animation', ANIMATION_DURATION_MILLISECOND)
+const animateDuration = ref(100)
+const setAnimateDuration = (): void => {
+  option('animation', animateDuration.value)
+}
 </script>
 
 <template>
-  <island>
-    <h1>Sortable div</h1>
+  <island title="Sortable div">
     <div ref="somethingToBeRef" class="sortable-div">
       <div v-for="(item) in list" :key="item.name" style="margin: 5px">
         <el-card>{{ item.name }}</el-card>
       </div>
     </div>
 
+    <div style="display: flex; width: 400px">
+      <el-input v-model="animateDuration"></el-input>
+      <el-button style="margin-left: 5px" @click="setAnimateDuration()">set animation(milliseconds)</el-button>
+    </div>
     <p>legacy value is: {{ JSON.stringify(legacyList) }}</p>
     <p>list value (computed) is: {{ JSON.stringify(list) }}</p>
   </island>
