@@ -8,7 +8,7 @@ const {x, y} = useMouse()
 
 <template>
   <island title="Test mouse position">
-    <p>mouse position at: {{ x }} {{ y }}</p>
+    <p>mouse position at: {{ x }}, {{ y }}</p>
   </island>
 </template>
 

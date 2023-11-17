@@ -22,11 +22,20 @@ const list = computed(() => {
   })
 })
 const somethingToBeRef = ref<HTMLElement | null>(null)
+const eventInfo = ref()
 const {option} = useSortable(somethingToBeRef, list, {
   /**
    * 通过 useSortable 的 fn 参数直接设置 animation 属性
    */
-  animation: 500
+  animation: 500,
+
+  /**
+   * 2. UPDATE
+   * 通过 options.onUpdate: callback 实现自定义操作
+   */
+  onUpdate: (e) => {
+    console.log(e)
+  }
 })
 
 /**
@@ -53,5 +62,6 @@ const setAnimateDuration = (): void => {
     </div>
     <p>legacy value is: {{ JSON.stringify(legacyList) }}</p>
     <p>list value (computed) is: {{ JSON.stringify(list) }}</p>
+    <p v-if="eventInfo">update event info is: {{ JSON.stringify(eventInfo) }}</p>
   </island>
 </template>
