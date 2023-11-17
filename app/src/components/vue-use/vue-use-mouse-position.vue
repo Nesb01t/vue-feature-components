@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {useMouse} from "@vueuse/core";
-import Island from "./common/island.vue";
+import Island from "../common/island.vue";
 
 const {x, y} = useMouse()
 

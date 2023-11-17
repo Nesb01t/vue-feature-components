@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Island from "./common/island.vue";
+import Island from "../common/island.vue";
 import {ref} from "vue";
 
 const selectValue = ref('')

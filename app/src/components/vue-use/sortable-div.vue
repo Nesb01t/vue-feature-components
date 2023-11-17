@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Island from "./common/island.vue";
+import Island from "../common/island.vue";
 import {computed, ref} from "vue";
 
 /**
