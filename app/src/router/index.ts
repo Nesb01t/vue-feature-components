@@ -2,16 +2,21 @@ import {createRouter, createWebHistory, RouteRecordRaw} from "vue-router";
 
 const routes: RouteRecordRaw[] = [
     {
-        path: '/auth',
-        name: 'auth',
+        path: '/',
+        name: 'demo',
         meta: {
-            title: "登录",
-            keepAlive: true,
-            requireAuth: false
+            title: "views/demo",
         },
-        // component: () => import('@/pages/auth.vue')
-    } as any
-    // TODO fix any script
+        component: () => import('../views/demo.vue')
+    },
+    {
+        path: '/scroll',
+        name: 'scroll',
+        meta: {
+            title: "views/scroll",
+        },
+        component: () => import('../views/infinity-scroll.vue')
+    }
 ]
 
 const router = createRouter(
