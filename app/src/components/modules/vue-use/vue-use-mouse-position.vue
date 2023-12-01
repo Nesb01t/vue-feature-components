@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import {useMouse} from "@vueuse/core";
-import Island from "../common/island.vue";
+import { useMouse } from "@vueuse/core";
+import Island from "../../common/island.vue";
 
-const {x, y} = useMouse()
-
+const { x, y } = useMouse();
 </script>
 
 <template>
@@ -12,6 +11,4 @@ const {x, y} = useMouse()
   </island>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

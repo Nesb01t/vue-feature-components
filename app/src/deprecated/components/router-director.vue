@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-
-import Island from "../common/island.vue";
+import Island from "@/components/common/island.vue";
 </script>
 
 <template>
@@ -15,6 +14,4 @@ import Island from "../common/island.vue";
   </island>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

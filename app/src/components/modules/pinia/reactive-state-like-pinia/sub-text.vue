@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {reactiveState} from "./state.ts";
+import { reactiveState } from "./state.ts";
 </script>
 
 <template>

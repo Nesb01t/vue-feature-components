@@ -1,21 +1,22 @@
-import {createApp} from 'vue'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
-import App from './App.vue'
-import {createPinia} from 'pinia'
+import { createApp } from "vue";
+import ElementPlus from "element-plus";
+import "./index.css";
+import "element-plus/dist/index.css";
+import App from "./App.vue";
+import { createPinia } from "pinia";
 import router from "./router";
 
-const app = createApp(App)
+const app = createApp(App);
 
 // styles
-app.use(ElementPlus)
+app.use(ElementPlus);
 
 // states controller
-const pinia = createPinia()
-app.use(pinia)
+const pinia = createPinia();
+app.use(pinia);
 
 // router
-app.use(router)
+app.use(router);
 
 // mount
-app.mount('#app')
+app.mount("#app");
