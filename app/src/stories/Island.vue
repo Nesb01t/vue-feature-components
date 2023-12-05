@@ -1,7 +1,14 @@
+<template>
+  <el-card style="margin: 10px">
+    <h1>{{ props.title }}</h1>
+    <slot></slot>
+  </el-card>
+</template>
+
 <script setup lang="ts">
-defineOptions<{
+defineOptions({
   name: 'Island'
-}>()
+})
 
 interface IProps {
   title?: string;
@@ -10,12 +17,6 @@ interface IProps {
 const props = defineProps<IProps>();
 </script>
 
-<template>
-  <el-card style="margin: 10px">
-    <h1>{{ props.title }}</h1>
-    <slot></slot>
-  </el-card>
-</template>
 
 <style scoped>
 </style>
