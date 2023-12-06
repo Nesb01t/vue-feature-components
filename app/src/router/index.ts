@@ -22,6 +22,11 @@ export const routes: RouteRecordRaw[] = [
     component: () => import("../views/modules/pinia.vue"),
   },
   {
+    path: "/vanilla",
+    name: "Vanilla",
+    component: () => import("../views/modules/vanilla.vue"),
+  },
+  {
     path: "/element",
     name: "Element plus",
     component: () => import("../views/modules/element-plus.vue"),
