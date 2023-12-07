@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
     "@types/lodash": "^4.14.201",
     "@vueuse/core": "^10.6.1",
     "@vueuse/integrations": "^10.6.1",
