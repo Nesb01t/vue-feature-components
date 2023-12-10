@@ -1,7 +1,7 @@
 <script setup lang="ts">
-defineOptions<{
-  name: 'Island'
-}>()
+defineOptions({
+  name: "Island",
+});
 
 interface IProps {
   title?: string;
@@ -17,5 +17,4 @@ const props = defineProps<IProps>();
   </el-card>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
